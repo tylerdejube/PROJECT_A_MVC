@@ -7,5 +7,6 @@ namespace PROJECT_GROUP_A.Models
 {
     public class UserSkill
     {
+        //asdasdasd
     }
 }
