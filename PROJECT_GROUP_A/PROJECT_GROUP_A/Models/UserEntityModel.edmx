@@ -191,7 +191,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EntitiesConn" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="UserEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="SKILLS" EntityType="Self.SKILL" />
           <EntitySet Name="USERS" EntityType="Self.USER" />
           <EntitySet Name="USERSKILLS" EntityType="Self.USERSKILL" />
@@ -217,7 +217,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EntitiesConn">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="UserEntities">
           <EntitySetMapping Name="SKILLS">
             <EntityTypeMapping TypeName="Model.SKILL">
               <MappingFragment StoreEntitySet="SKILLS">

@@ -13,10 +13,10 @@ namespace PROJECT_GROUP_A.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EntitiesConn : DbContext
+    public partial class UserEntities : DbContext
     {
-        public EntitiesConn()
-            : base("name=EntitiesConn")
+        public UserEntities()
+            : base("name=UserEntities")
         {
         }
     

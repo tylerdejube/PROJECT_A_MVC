@@ -158,19 +158,34 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\TestingController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKILL.cs">
+      <DependentUpon>UserEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USER.cs">
+      <DependentUpon>UserEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserEntityModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserEntityModel.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserEntityModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserEntityModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\UserEntityModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserEntityModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USERSKILL.cs">
+      <DependentUpon>UserEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -196,7 +211,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\UserEntityModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserEntityModel.edmx</DependentUpon>
       <LastGenOutput>UserEntityModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\UserEntityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserEntityModel.edmx</DependentUpon>
+      <LastGenOutput>UserEntityModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -208,9 +229,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>UserEntityModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\UserEntityModel.edmx.diagram">
+    <Content Include="Models\UserEntityModel.edmx.diagram">
       <DependentUpon>UserEntityModel.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -243,6 +264,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Testing\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
